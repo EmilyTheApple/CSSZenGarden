@@ -1,0 +1,68 @@
+.intro { 
+    display: grid; 
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    background-color: $color-3;
+    padding: 10px;
+    width: 95%;
+    max-width: 1080px;
+    margin: auto;
+} 
+
+header {
+    display: flex;
+    padding: 10px;
+}
+
+h1 {
+    width: 600px;
+    height: 80px;
+    position: relative;
+    background: $color-1;
+    font-size: 60px;
+    text-align: center;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+h1:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-right: 20px solid $color-3;
+      border-top: 40px solid transparent;
+      border-bottom: 40px solid transparent;
+}
+
+h1:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid $color-3;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+}
+
+h2 {
+    text-align: center;
+}
+
+.summary {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    background-color: $color-1;
+    padding: 10px;
+    width: 200px;
+}
+
+.preamble {
+    grid-column: 1;
+    grid-row: 3 / span 2;
+}
+
