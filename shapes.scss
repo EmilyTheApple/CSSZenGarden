@@ -1,0 +1,65 @@
+#bodyShape1 {
+    width: 0;
+    height: 0;
+    border: 200px solid transparent;
+    border-bottom: 40px solid red;
+    position: relative;
+    top: -200px;
+    margin: 50px;
+  }
+  #bodyShape1:before {
+    content:'';
+    position: absolute;
+    width: 240px;
+    height: 0;
+    border: 80px solid red;
+    left: -200px;
+    top: 40px;
+  }
+  #bodyShape1:after {
+    content: '';
+    position: absolute;
+    left: -200px;
+    top: 200px;
+    width: 0;
+    height: 0;
+    border: 200px solid transparent;
+    border-top: 40px solid red;   
+  }
+  #bodyShape2 {
+    width: 400px;
+    height: 250px;
+    box-sizing: content-box;
+    padding-top: 15px;
+    position: relative;
+    background: red;
+    color: white;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 50px;
+  }
+  #bodyShape2:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 40px solid white;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+  }
+  #bodyShape2:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 40px solid white;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+  }
