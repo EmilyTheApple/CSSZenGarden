@@ -27,7 +27,6 @@
   border-bottom: 4em solid transparent;
   left: -30px;   
   margin-bottom: 40px;
-  text-align: right;
 }
 .zen-resources li:nth-of-type(odd):after, nav li:nth-of-type(odd):after {
   position: absolute;
@@ -48,7 +47,7 @@
   border-top: 4em solid transparent;
   border-right: 5em solid $color-3;
   border-bottom: 4em solid transparent;
-  left: -25px;
+  left: -30px;
   margin-bottom: 40px;
 }
 .zen-resources li:nth-of-type(even):after, nav li:nth-of-type(even):after {
