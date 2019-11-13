@@ -4,6 +4,10 @@ $color-3: #B2ccb1; // light green
 $color-4: #6d9172; // Middle green
 $color-5: #fbfafb; // lightest
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald&display=swap');
+
+$primary-font: 'Oswald', sans-serif;
+$secondary-font: 'Open Sans Condensed', sans-serif;
 
 body {
     background-color: $color-5;
@@ -12,6 +16,7 @@ body {
 /**************** HEADER ****************/
 
 @import 'partials/header';
+
 
 /**************** SIDEBAR ****************/
 
@@ -25,32 +30,52 @@ body {
 
 /*************** medium screen *******************/
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
+    
+    header {
+        width: 100%;
+        margin: auto;
+    }
+    
     .summary {
         grid-row: 2;
         grid-column: 1;
         width: 80%;
         margin: auto;
+        border: none;
     }
     
     .sidebar {
-        top: 650px;
+        top: 700px;
     }
     
 }
 
-
 /* small screen */
 
-@media (max-width: 780px) {
+@media (max-width: 800px) {
+
     
     .intro {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+    }
+        
+    header {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
     }
     
     h1 {
-        width: 90%;
+        width: 100%;
+        margin: auto;
+        margin-left: 10px;
+    }
+    
+    h2 {
+        width: 100%;
         margin: auto;
         font-size: 30px;
     }
@@ -58,8 +83,12 @@ body {
     .summary {
         width: 80%;
         margin: auto;
+        margin-top: 30px;
     }
     
+    .preamble {
+        margin-top: 10px;
+    }
     
     .sidebar {
         position: relative;
@@ -67,10 +96,10 @@ body {
         margin: auto;
         top: 0;
     }
+    
     .explanation, .participation, .benefits, .requirements {
         width: 95%;
         margin: auto;
-        background-color: $color-1;
     }
     
     
