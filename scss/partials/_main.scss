@@ -3,10 +3,72 @@
 }
 
 .explanation, .participation, .benefits, .requirements {
-    margin-left: 220px;
+    margin-left: 320px;
     background-color: $color-1;
 }
 
-footer {
-    text-align: center;
-}
+.explanation, .benefits {
+      width: 400px;
+      height: 200px;
+      margin-top: 100px;
+      background: red;
+      position: relative;
+    }
+
+.explanation:before, .benefits:before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 200px solid transparent;
+      border-right: 200px solid transparent;
+      border-bottom: 15px solid red;
+    }
+
+.explanation:after, .benefits:after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 200px solid transparent;
+      border-right: 200px solid transparent;
+      border-top: 15px solid red;
+    }
+  
+
+.participation, .requirements {
+      width: 400px;
+      height: 200px;
+      margin-top: 100px;
+      background: red;
+      position: relative;
+    }
+
+.participation:before, .requirements:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 200px solid transparent;
+      border-right: 200px solid transparent;
+      border-top: 15px solid white;
+    }
+
+.participation:after, .requirements:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 200px solid transparent;
+      border-right: 200px solid transparent;
+      border-bottom: 15px solid white;
+    }
+
