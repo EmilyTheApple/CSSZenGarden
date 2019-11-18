@@ -1,0 +1,74 @@
+.main {
+  margin: 2.5%;
+  width: 780px;
+  margin-top: 68px;
+}
+.explanation, .participation, .benefits, .requirements {
+  margin-left: 320px;
+  background-color: $color-1;
+}
+
+.explanation, .benefits {
+    width: 731px;
+    height: 100%px;
+    background: red;
+    position: relative;
+    padding: 0 10px;
+  }
+
+.explanation:before, .benefits:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 375.5px solid transparent;
+    border-right: 375.5px solid transparent;
+    border-bottom: 15px solid red;
+  }
+
+.explanation:after, .benefits:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 375.5px solid transparent;
+    border-right: 375.5px solid transparent;
+    border-top: 15px solid red;
+  }
+
+
+.participation, .requirements {
+    width: 731px;
+    height: 100%;
+    padding: 5px 10px;
+    background: red;
+    position: relative;
+  }
+
+.participation:before, .requirements:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 375.5px solid transparent;
+    border-right: 375.5px solid transparent;
+    border-top: 15px solid white;
+  }
+
+.participation:after, .requirements:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 375.5px solid transparent;
+    border-right: 375.5px solid transparent;
+    border-bottom: 15px solid white;
+  }
