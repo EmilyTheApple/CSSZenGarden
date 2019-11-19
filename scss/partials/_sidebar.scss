@@ -1,6 +1,6 @@
 .sidebar {
     height: auto;
-    width: 300px;
+    width: 12vw;
     position: absolute;
     top: 525px;
     left: 0;
@@ -9,16 +9,114 @@
     padding: 10px;
     font-size: 14px;
     margin-left: 10px;
-    display: flex;
-    flex-direction: column;
 }
-
+.sidebar h3 {
+  padding: 30px;
+}
 .sidebar a {
-    padding: 6px 6px 6px 32px;
-    text-decoration: none;
-    font-size: 14px;
-    display: block;
+  padding: 6px 6px 6px 32px;
+  font-size: 14px;
+  display: block;
+  color: $color-2;
 
 }
+.sidebar li {
+  list-style: none;
+  text-align: center;
+}
 
+
+/*.wrapper{
+  display: grid;
+  gap: 1vw;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  
+}
+.design-selection li:nth-child(odd) {
+  grid-column: 1 / 3;
+}
+.design-selection li:nth-child(even) {
+  grid-column: 2 / 4;
+}*/
+
+.zen-resources li:nth-of-type(odd), nav li:nth-of-type(odd) {
+  width: 8vw;
+  height: 8vh;
+  background: $color-1;
+  position: relative;
+  left: -35px;
+  margin: 60px;
+  padding-top: 20px;
+}
+.zen-resources li:nth-of-type(odd):after, nav li:nth-of-type(odd):after {
+  content: "";
+      position: absolute;
+     /* top: -17px;*/
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 4vw solid transparent;
+      border-right: 4vw solid transparent;
+      border-bottom: 2vw solid $color-1;
+      transform: rotate (90deg);
+      top: -37px;
+      
+}
+.zen-resources li:nth-of-type(odd):before, nav li:nth-of-type(odd):before {
+  content: "";
+      position: absolute;
+      /*top: -17px;*/
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 4vw solid transparent;
+      border-right: 4vw solid transparent;
+      border-bottom: 2vw solid $color-1;
+      top: 98px;
+      transform: rotate(180deg);
+      
+}
+
+.zen-resources li:nth-of-type(even), nav li:nth-of-type(even) {
+  width: 8vw;
+  height: 8vh;
+  background: $color-3;
+  position: relative;
+  left: -35px;
+  margin: 0px;
+  padding-top: 20px;
+}
+.zen-resources li:nth-of-type(even):after, nav li:nth-of-type(even):after {
+  content: "";
+      position: absolute;
+      /*top: -17px;*/
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 4vw solid transparent;
+      border-right: 4vw solid transparent;
+      border-bottom: 2vw solid $color-3;
+      transform: rotate (90deg);
+      top: -37px;
+      
+}
+.zen-resources li:nth-of-type(even):before, nav li:nth-of-type(even):before {
+  content: "";
+      position: absolute;
+     /* top: -17px;*/
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 4vw solid transparent;
+      border-right: 4vw solid transparent;
+      border-bottom: 2vw solid $color-3;
+      top: 97px;
+      transform: rotate(180deg);
+      
+}
+/*.zen-resources li:nth-of-type(even), nav li:nth-of-type(even) {
+transform: rotate(180deg);
+left: 25px;
+}*/
 
