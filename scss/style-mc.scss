@@ -1,0 +1,270 @@
+$color-1: #94849b; // Purple
+$color-2: #272d28; // Darkest green
+$color-3: #B2ccb1; // light green
+$color-4: #6d9172; // Middle green
+$color-5: #fbfafb; // lightest
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald&display=swap');
+
+$primary-font: 'Oswald', sans-serif;
+$secondary-font: 'Open Sans Condensed', sans-serif;
+
+body {
+    background-color: $color-5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23DCE7DB' stroke-width='1px'%3E%3Cpattern id='pattern1' patternUnits='userSpaceOnUse' x='0' y='0' width='120' height='110'%3E%3Cpolygon points='0,20 0,0 50,0' stroke='none'/%3E%3Cpolygon points='70,0 120,0 120,20' stroke='none'/%3E%3Cpolygon points='10,30 60,10 110,30 60,110'/%3E%3Cpolygon points='0,30 0,110 50,110' stroke='none'/%3E%3Cpolygon points='120,30 120,110 70,110' stroke='none'/%3E%3Cpolyline points='70,0 120,20'/%3E%3Cpolyline points='120,30 70,110'/%3E%3Cpolyline points='0,20 50,0'/%3E%3Cpolyline points='0,30 50,110'/%3E%3C/pattern%3E%3Crect fill='url(%23pattern1)' stroke='none' width='100vw' height='100vw'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+
+}
+
+/**************** HEADER ****************/
+
+@import 'partials/header';
+
+
+/**************** SIDEBAR ****************/
+
+@import 'partials/sidebar';
+
+
+/*************** MAIN CONTENT ********************/
+
+@import 'partials/main';
+
+
+/*****************FOOTER***********************/
+
+@import 'partials/footer';
+
+
+/*************** medium screen *******************/
+
+@media (max-width: 1100px) {
+    
+    header {
+        width: 100%;
+        margin: auto;
+    }
+    
+    .summary {
+        grid-row: 2;
+        grid-column: 1;
+        width: 80%;
+        margin: auto;
+        border: none;
+    }
+    
+    
+    
+    .explanation, .participation, .benefits, .requirements {
+        width: 95%;
+        margin: auto;
+    }
+    
+    .explanation:before, .benefits:before {
+      border-left: 46vw solid transparent;
+      border-right: 46vw solid transparent;
+    }
+
+.explanation:after, .benefits:after {
+      border-left: 46vw solid transparent;
+      border-right: 46vw solid transparent;
+    }
+  
+.participation:before, .requirements:before {
+      border-left: 46vw solid transparent;
+      border-right: 46vw solid transparent;
+    }
+
+.participation:after, .requirements:after {
+      border-left: 46vw solid transparent;
+      border-right: 46vw solid transparent;
+    }
+    
+   
+    .sidebar h3 {
+        transform: rotate(0deg);
+        position: relative;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 95%;
+        top: 50px;
+        margin: 0 auto;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sidebar nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+
+    }
+    .sidebar nav ul li:nth-child(1)  {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    .sidebar nav ul li:nth-child(5) {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+
+    .sidebar nav ul li:nth-child(2) {
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+
+    .sidebar nav ul li:nth-child(6) {
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+
+    .sidebar nav ul li:nth-child(3) {
+        grid-column-start: 3;
+        grid-row-start: 1;
+    }
+
+    .sidebar nav ul li:nth-child(7) {
+        grid-column-start: 3;
+        grid-row-start: 2;
+    }
+
+    .sidebar nav ul li:nth-child(4) {
+        grid-column-start: 4;
+        grid-row-start: 1;
+    }
+
+    .sidebar nav ul li:nth-child(8) {
+        grid-column-start: 4;
+        grid-row-start: 2;
+    }
+
+    .sidebar div li:nth-of-type(odd), .zen-resources li:nth-of-type(even), nav li:nth-of-type(even) {
+        display: flex;
+        position: relative;
+        left: 0px;
+        top: 0px;
+        margin: 0px;
+        
+    }
+
+    .zen-resources ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .zen-resource ul li:nth-child(1) {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    .zen-resource ul li:nth-child(4) {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+
+    .zen-resource ul li:nth-child(2) {
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+    
+    .zen-resource ul li:nth-child(5) {
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+   
+    .zen-resource ul li:nth-child(3) {
+        grid-column-start: 3;
+        grid-row-start: 1;
+    }
+   
+}
+
+/* small screen */
+
+@media (max-width: 800px) {
+
+    
+    .intro {
+        display: flex;
+        flex-direction: column;
+    }
+        
+    header {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    h1 {
+        width: 100%;
+        margin: auto;
+        margin-left: 10px;
+    }
+    
+    h2 {
+        width: 100%;
+        margin: auto;
+        font-size: 30px;
+    }
+    
+    .summary {
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+    }
+    
+    .preamble {
+        margin-top: 10px;
+    }
+    
+    .sidebar {
+        position: relative;
+        width: 95%;
+        margin: auto;
+        top: 0;
+    }
+    
+    .explanation, .participation, .benefits, .requirements {
+        width: 95%;
+        margin: auto;
+    }
+    
+    .explanation:before, .benefits:before {
+      border-left: 45vw solid transparent;
+      border-right: 45vw solid transparent;
+    }
+
+.explanation:after, .benefits:after {
+      border-left: 45vw solid transparent;
+      border-right: 45vw solid transparent;
+    }
+  
+.participation:before, .requirements:before {
+      border-left: 45vw solid transparent;
+      border-right: 45vw solid transparent;
+    }
+
+.participation:after, .requirements:after {
+      border-left: 45vw solid transparent;
+      border-right: 45vw solid transparent;
+    }
+    
+    
+}
+
+
+
+
+
+
+
