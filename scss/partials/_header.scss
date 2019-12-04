@@ -3,9 +3,10 @@
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
     padding: 10px;
-    width: 95%;
+    width: 75%;
     max-width: 1080px;
     margin: auto;
+    margin-left: 270px;
 } 
 
 header {
@@ -35,6 +36,12 @@ h1 {
     letter-spacing: 2px;
 }
 
+
+@keyframes h1before {
+  0% {border-right: 20px solid $color-5;}
+  100% {border-right: 0px solid $color-5; right:0px;}
+}
+
 h1:before {
       content: "";
       position: absolute;
@@ -45,6 +52,12 @@ h1:before {
       border-right: 20px solid $color-5;
       border-top: 40px solid transparent;
       border-bottom: 40px solid transparent;
+      animation: h1before 2s linear 1s infinite alternate;
+}
+
+@keyframes h1after {
+  0% {border-left: 20px solid $color-5;}
+  100% {border-left: 0px solid $color-5; left:0px;}
 }
 
 h1:after {
@@ -57,7 +70,10 @@ h1:after {
     border-left: 20px solid $color-5;
     border-top: 40px solid transparent;
     border-bottom: 40px solid transparent;
+    animation: h1after 2s linear 1s infinite alternate;
 }
+
+
 
 
 h2 {
@@ -65,13 +81,29 @@ h2 {
     height: 80px;
     position: relative;
     background: $color-1;
-    font-size: auto;
+    font-size: 25px;
     text-align: center;
     grid-column: 2;
     grid-row: 1;
     text-transform: uppercase;
     top: 22px;
     z-index: 1;
+    line-height: 80px;
+}
+
+@keyframes h2after {
+  0% {border-right: 20px solid $color-1;}
+  33% {border-right: 0px solid $color-1; left:0px;}
+  66% {border-left: 0px solid white;}
+  100% {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;}
 }
 
 h2:after {
@@ -84,7 +116,24 @@ h2:after {
       border-right: 20px solid $color-1;
       border-top: 40px solid transparent;
       border-bottom: 40px solid transparent;
+      animation: h2after 4s linear 1s infinite alternate;
     }
+
+@keyframes h2before {
+  0% {border-left: 20px solid $color-1;}
+  33% {border-left: 0px solid $color-1; right:0px;}
+  66% {border-right: 0px solid white;}
+  100% {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-right: 20px solid white;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;}
+  
+}
 
 h2:before {
       content: "";
@@ -96,33 +145,9 @@ h2:before {
       border-left: 20px solid $color-1;
       border-top: 40px solid transparent;
       border-bottom: 40px solid transparent;
+      animation: h2before 4s linear 1s infinite alternate;
     }
 
-/*
-h2:before {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 0;
-      height: 0;
-      border-left: 20px solid $color-3;
-      border-top: 40px solid transparent;
-      border-bottom: 40px solid transparent;
-}
-
-h2:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 20px solid $color-3;
-    border-top: 40px solid transparent;
-    border-bottom: 40px solid transparent;
-}
-*/
 
 .summary {
     grid-column: 3;
@@ -135,7 +160,6 @@ h2:after {
     word-spacing: 3px;
     border-top: 50px solid $color-5;
     background-color: rgba(178, 204, 177, 0.5);
-
 }
 
 .summary p:nth-child(2){
@@ -170,7 +194,10 @@ h2:after {
     grid-column: 1;
     grid-row: 3 / span 2;
     border: 3px solid $color-3;
+    background-color: $color-2;
+    color: $color-5;
     padding: 5px;
+    padding-left: 10px;
     font-family: $secondary-font;
 }
 

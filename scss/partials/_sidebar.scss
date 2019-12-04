@@ -2,7 +2,7 @@
     height: auto;
     width: 18vw;
     position: absolute;
-    top: 525px;
+    top: 0;
     left: 0;
     background-color: $color-4;
     overflow-x: hidden;
@@ -43,7 +43,7 @@ font-size: .85em;
     margin-left: 70px;
     margin-top: -25px;
     padding-top: 20px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100.8,2.8 33.6,2.8 0,56 33,112 100.8,112 134.4,56' style='fill:purple;stroke:purple;stroke-width:1'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100.8,2.8 33.6,2.8 0,56 33,112 100.8,112 134.4,56' style='fill:%2394849B;stroke:purple;stroke-width:1'/%3E%3C/svg%3E");
     width: 193px;
     height: 160px;
 }
@@ -60,5 +60,4 @@ font-size: .85em;
     width: 193px;
     height: 160px;
 }
-
 

@@ -1,10 +1,10 @@
 footer {
     position: relative;
     margin-top: 100px;
-    height: 400px;
+    height: 225px;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     background-color: $color-2;
 }
@@ -79,56 +79,78 @@ footer a:nth-child(5) {
 
 
 
-/*
-footer a:nth-of-type(odd) {
-  position: relative;
-  width: auto;
-  height: 50px;
-  border-top: 40px solid transparent;
-  border-right: 90px solid $color-1;
-  border-bottom: 40px solid transparent; 
-  left: 0;
-  right: 50px;
-  margin-bottom: 40px;
+/********animations**********/
+@keyframes ltdbb {
+  0% {border-bottom-color: #CeCdCe;}
+  50% {border-bottom-color: #B2CCB1;}
+  100% {border-bottom-color: #6D9172;}
+  
+}
+@keyframes ltdbt {
+  0% {border-top-color: #CeCdCe;}
+  50% {border-top-color: #B2CCB1;}
+  100% {border-top-color: #6D9172;}
+}
+@keyframes purpgraybb {
+  from {border-bottom-color: #94849B;}
+  to {border-bottom-color: #CeCdCe;}
+}
+@keyframes purpgraybt {
+  from {border-top-color: #94849B;}
+  to {border-top-color: #CeCdCe;}
+}
+@keyframes greenpurpbb {
+  0% {border-bottom-color: #6D9172;}
+  50% {border-bottom-color: #94849B;}
+  100% {border-bottom-color: #94849B;}
+}
+@keyframes greenpurpbt {
+    0% {border-top-color: #6D9172;}
+  50% {border-top-color: #94849B;}
+  100% {border-top-color: #94849B;}
+}
+@keyframes greengraybb {
+  from {border-bottom-color: #CeCdCe;}
+  to {border-bottom-color: #6D9172;}
+}
+@keyframes greengraybt {
+  from {border-top-color: #CeCdCe;}
+  to {border-top-color: #6D9172;}
 }
 
-footer a:nth-of-type(odd):after {
-  position: absolute;
-  content: '';
-  width: auto;
-  height: 50px;
-  border-top: 40px solid transparent;
-  border-left: 50px solid $color-4;
-  border-bottom: 40px solid transparent;
-  left: 100px;
-  top: -58px;
+
+
+footer a:nth-child(1) {
+  animation: ltdbb 4s linear 0s infinite alternate;
+}
+footer a:nth-child(1):after {
+  animation: ltdbt 4s linear 0s infinite alternate;
 }
 
-footer a:nth-of-type(even) {
-  position: relative;
-  width: 0;
-  height: 0;
-  border-top: 40px solid transparent;
-  border-right: 50px solid $color-3;
-  border-bottom: 40px solid transparent;
-  left: -30px;
-  margin-bottom: 40px;
+footer a:nth-child(2) {
+  animation: purpgraybb 4s linear 1s infinite alternate;
+}
+footer a:nth-child(2):after {
+  animation: purpgraybt 4s linear 1s infinite alternate;
 }
 
-footer a:nth-of-type(even):after {
-  position: absolute;
-  content: '';
-  width: 0;
-  height: 0;
-  border-top: 40px solid transparent;
-  border-left: 90px solid $color-3;
-  border-bottom: 40px solid transparent;
-  left: 68px;
-  top: -56px;
+footer a:nth-child(3) {
+  animation: greenpurpbb 2.5s linear 1s infinite alternate;
+}
+footer a:nth-child(3):after {
+  animation: greenpurpbt 2.5s linear 1s infinite alternate;
 }
 
-/*.zen-resources li:nth-of-type(even), nav li:nth-of-type(even) {
-  transform: rotate(180deg);
-  left: 25px;
-}*/
+footer a:nth-child(4) {
+  animation: greenpurpbb 2s linear 0s infinite alternate;
+}
+footer a:nth-child(4):after {
+  animation: greenpurpbt 2s linear 0s infinite alternate;
+}
 
+footer a:nth-child(5) {
+  animation: greengraybb 3s linear 0s infinite alternate;
+}
+footer a:nth-child(5):after {
+  animation: greengraybt 3s linear 0s infinite alternate;
+}
