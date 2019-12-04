@@ -13,7 +13,7 @@ body {
     background-color: $color-5;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23DCE7DB' stroke-width='1px'%3E%3Cpattern id='pattern1' patternUnits='userSpaceOnUse' x='0' y='0' width='120' height='110'%3E%3Cpolygon points='0,20 0,0 50,0' stroke='none'/%3E%3Cpolygon points='70,0 120,0 120,20' stroke='none'/%3E%3Cpolygon points='10,30 60,10 110,30 60,110'/%3E%3Cpolygon points='0,30 0,110 50,110' stroke='none'/%3E%3Cpolygon points='120,30 120,110 70,110' stroke='none'/%3E%3Cpolyline points='70,0 120,20'/%3E%3Cpolyline points='120,30 70,110'/%3E%3Cpolyline points='0,20 50,0'/%3E%3Cpolyline points='0,30 50,110'/%3E%3C/pattern%3E%3Crect fill='url(%23pattern1)' stroke='none' width='100vw' height='100vw'/%3E%3C/svg%3E");
     background-repeat: repeat;
-
+    background-attachment: fixed;
 }
 
 /**************** HEADER ****************/
@@ -53,16 +53,6 @@ body {
         border: none;
     }
     
-    .sidebar {
-        top: 700px;
-    }
-    
-    .sidebar h3 {
-        transform: rotate(0deg);
-        position: relative;
-        left: 150px;
-        top: 20px;
-    }
     
     .explanation, .participation, .benefits, .requirements {
         width: 95%;
@@ -90,12 +80,110 @@ body {
     }
     
     
+    .sidebar h3 {
+        transform: rotate(0deg);
+        position: relative;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
     .sidebar {
         position: relative;
         width: 95%;
-        margin: auto;
-        top: 0;
+        top: 50px;
+        margin: 0 auto;
+
+        align-items: center;
+        justify-content: center;
     }
+
+    .sidebar nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+
+    }
+    .sidebar nav ul li:nth-child(1)  {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    .sidebar nav ul li:nth-child(5) {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+
+    .sidebar nav ul li:nth-child(2) {
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+
+    .sidebar nav ul li:nth-child(6) {
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+
+    .sidebar nav ul li:nth-child(3) {
+        grid-column-start: 3;
+        grid-row-start: 1;
+    }
+
+    .sidebar nav ul li:nth-child(7) {
+        grid-column-start: 3;
+        grid-row-start: 2;
+    }
+
+    .sidebar nav ul li:nth-child(4) {
+        grid-column-start: 4;
+        grid-row-start: 1;
+    }
+
+    .sidebar nav ul li:nth-child(8) {
+        grid-column-start: 4;
+        grid-row-start: 2;
+    }
+
+    .sidebar div li:nth-of-type(odd), .zen-resources li:nth-of-type(even), nav li:nth-of-type(even) {
+        display: flex;
+        position: relative;
+        left: 0px;
+        top: 0px;
+        margin: 0px; 
+    }
+
+    .zen-resources ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .zen-resource ul li:nth-child(1) {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    .zen-resource ul li:nth-child(4) {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+
+    .zen-resource ul li:nth-child(2) {
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+    
+    .zen-resource ul li:nth-child(5) {
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+   
+    .zen-resource ul li:nth-child(3) {
+        grid-column-start: 3;
+        grid-row-start: 1;
+    }
+   
     
 }
 
