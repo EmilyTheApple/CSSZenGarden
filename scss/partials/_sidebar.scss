@@ -1,6 +1,5 @@
 .sidebar {
-    height: auto;
-    width: 18vw;
+    width: 17vw;
     position: absolute;
     top: 0;
     left: 0;
@@ -8,16 +7,30 @@
     overflow-x: hidden;
     padding: 10px;
     font-size: 14px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .sidebar h3 {
     width: 150px;
     transform: rotate(-90deg);
+    font-family: $primary-font;
     position: relative;
     right: 60px;
-    top: 140px;
-    font-size: 20px;
+    top: 50px;
+    font-size: 1.5em;
+}
+
+.sidebar a, .sidebar li {
+  font-family: $secondary-font;
+  color: $color-2;
+ 
+}
+
+.sidebar a:hover {
+  color: $color-5;
+  transition: font-size .5s ease;
+  font-size: 1.2em;
+
 }
 
 .sidebar a {
@@ -29,35 +42,105 @@
 
 }
 .sidebar li {
-font-size: .85em;
+  font-size: 1em;
   list-style: none;
   text-align: center;
   display: flex;
   flex-direction: column;
-
 }
 
 .sidebar div li:nth-of-type(odd) {
     position: relative;
-    left: -25px;
-    margin-left: 70px;
+    margin-left: 90px;
     margin-top: -25px;
     padding-top: 20px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100.8,2.8 33.6,2.8 0,56 33,112 100.8,112 134.4,56' style='fill:%2394849B;stroke:purple;stroke-width:1'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100.8,2.8 33.6,2.8 0,56 33,112 100.8,112 134.4,56' style='fill:%2394849B;stroke:%2394849B;stroke-width:1'/%3E%3C/svg%3E");
     width: 193px;
     height: 160px;
 }
 
 
 .zen-resources li:nth-of-type(even), nav li:nth-of-type(even) {
-  width: 8vw;
-  height: 8vh;
-  position: relative;
-  left: -15px;
-  margin-top: -25px;
-  padding-top: 20px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100.8,2.8 33.6,2.8 0,56 33,112 100.8,112 134.4,56' style='fill:green;stroke:green;stroke-width:1'/%3E%3C/svg%3E");
+    width: 8vw;
+    height: 8vh;
+    position: relative;
+    left: -15px;
+    margin-top: -25px;
+    padding-top: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100.8,2.8 33.6,2.8 0,56 33,112 100.8,112 134.4,56' style='fill:%23B2ccb1;stroke:%23B2ccb1;stroke-width:1'/%3E%3C/svg%3E");
     width: 193px;
     height: 160px;
 }
 
+.design-selection h3 {
+  top: 15px;
+}
+
+nav li:nth-child(1) /*Mid Century Modern*/ {
+  top: -5px;
+}
+
+nav li:nth-child(2) /*Garments*/{
+  top: -97px;
+}
+
+nav li:nth-of-type(3) /*Steel*/{
+  top: -190px;
+}
+
+nav li:nth-child(4) /*Apothecary*/{
+  top: -280px;
+}
+
+nav li:nth-of-type(5) /*screen filler*/{
+  top: -375px;
+}
+
+nav li:nth-child(6) /*Fountain Kiss*/ {
+  top: -465px;
+}
+
+nav li:nth-of-type(7) /*A Robot Named Jimmy*/{
+  top: -560px;
+}
+
+nav li:nth-child(8) /*Verde Modern*/{
+  top: -650px;
+}
+
+.design-archives h3 {
+  top: -700px;
+}
+
+.design-archives nav li:nth-child(1) /*next design*/ {
+   top: -710px;
+}
+
+.design-archives nav li:nth-child(2) /*view all designs*/ {
+  top: -800px;
+  z-index: 100;
+}
+
+.zen-resources h3 {
+  top: -825px;
+}
+
+.zen-resources li:nth-child(1) /*View This Design's CSS*/{
+  top: -845px;
+}
+
+.zen-resources li:nth-child(2) /*CSS Resources*/{
+  top: -935px;
+}
+
+.zen-resources li:nth-child(3) /*FAQ*/{
+  top: -1030px;
+}
+
+.zen-resources li:nth-child(4) /*Submit a Design*/{
+  top: -1120px;
+}
+
+.zen-resources li:nth-child(5) /*Translations*/{
+  top: -1210px;
+}
