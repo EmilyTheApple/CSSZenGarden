@@ -1,13 +1,15 @@
 .sidebar {
-    width: 17vw;
+    width: 280px;
     position: absolute;
     top: 0;
     left: 0;
+    height: 2000px;
+   /* background-color: rgba(109, 145, 114, 0.8); */
     background-color: $color-4;
     overflow-x: hidden;
     padding: 10px;
     font-size: 14px;
-    margin-left: 20px;
+    margin-left: 50px;
 }
 
 .sidebar h3 {
@@ -23,7 +25,7 @@
 .sidebar a, .sidebar li {
   font-family: $secondary-font;
   color: $color-2;
- 
+
 }
 
 .sidebar a:hover {
@@ -47,6 +49,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  
 }
 
 .sidebar div li:nth-of-type(odd) {

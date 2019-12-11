@@ -3,10 +3,9 @@
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
     padding: 10px;
-    width: 75%;
-    max-width: 1080px;
-    margin: auto;
-    margin-left: 270px;
+    width: 65%;
+    margin-left: 400px;
+    margin-right: 10px;
 } 
 
 header {
@@ -26,7 +25,7 @@ h1 {
     height: 80px;
     position: relative;
     background: $color-1;
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     grid-column: 1;
     grid-row: 1;
@@ -34,67 +33,43 @@ h1 {
     z-index: 1;
     right: 10px;
     letter-spacing: 2px;
+    line-height: 75px;
 }
 
 
 @keyframes h1before {
-  0% {border-right: 20px solid $color-5;}
-  100% {border-right: 0px solid $color-5; right:0px;}
+  0% {border-left: 20px solid $color-1;}
+  49% {border-left: 0px solid $color-1; right:0px;}
+  50% {border-right: 0px solid white;}
+  100% {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-right: 20px solid white;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;}
+  
 }
 
 h1:before {
       content: "";
       position: absolute;
-      right: 0;
+      right: -20px;
       bottom: 0;
       width: 0;
       height: 0;
-      border-right: 20px solid $color-5;
+      border-left: 20px solid $color-1;
       border-top: 40px solid transparent;
       border-bottom: 40px solid transparent;
-      animation: h1before 2s linear 1s infinite alternate;
+      animation: h1before 4s linear 1s infinite alternate;
 }
 
 @keyframes h1after {
-  0% {border-left: 20px solid $color-5;}
-  100% {border-left: 0px solid $color-5; left:0px;}
-}
-
-h1:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 20px solid $color-5;
-    border-top: 40px solid transparent;
-    border-bottom: 40px solid transparent;
-    animation: h1after 2s linear 1s infinite alternate;
-}
-
-
-
-
-h2 {
-    width: 100%;
-    height: 80px;
-    position: relative;
-    background: $color-1;
-    font-size: 25px;
-    text-align: center;
-    grid-column: 2;
-    grid-row: 1;
-    text-transform: uppercase;
-    top: 22px;
-    z-index: 1;
-    line-height: 80px;
-}
-
-@keyframes h2after {
   0% {border-right: 20px solid $color-1;}
-  33% {border-right: 0px solid $color-1; left:0px;}
-  66% {border-left: 0px solid white;}
+  49% {border-right: 0px solid $color-1; left:0px;}
+  50% {border-left: 0px solid white;}
   100% {
     position: absolute;
     left: 0;
@@ -103,7 +78,51 @@ h2 {
     height: 0;
     border-left: 20px solid white;
     border-top: 40px solid transparent;
-    border-bottom: 40px solid transparent;}
+    border-bottom: 40px solid transparent;
+    }
+}
+
+h1:after {
+      content: "";
+      position: absolute;
+      left: -20px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-right: 20px solid $color-1;
+      border-top: 40px solid transparent;
+      border-bottom: 40px solid transparent;
+      animation: h1after 4s linear 1s infinite alternate;
+    }
+
+h2 {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    background: $color-1;
+    font-size: 20px;
+    text-align: center;
+    grid-column: 2;
+    grid-row: 1;
+    text-transform: uppercase;
+    top: 8px;
+    line-height: 80px;
+}
+
+@keyframes h2after {
+  0% {border-right: 20px solid $color-1; z-index:1;}
+  49% {border-right: 0px solid $color-1; left:0px;}
+  50% {border-left: 0px solid white;}
+  100% {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    }
 }
 
 h2:after {
@@ -116,13 +135,13 @@ h2:after {
       border-right: 20px solid $color-1;
       border-top: 40px solid transparent;
       border-bottom: 40px solid transparent;
-      animation: h2after 4s linear 1s infinite alternate;
+      animation: h2after 4s linear 5s infinite alternate;
     }
 
 @keyframes h2before {
   0% {border-left: 20px solid $color-1;}
-  33% {border-left: 0px solid $color-1; right:0px;}
-  66% {border-right: 0px solid white;}
+  49% {border-left: 0px solid $color-1; right:0px;}
+  50% {border-right: 0px solid white; z-index:1;}
   100% {
     position: absolute;
     right: 0;
@@ -131,7 +150,9 @@ h2:after {
     height: 0;
     border-right: 20px solid white;
     border-top: 40px solid transparent;
-    border-bottom: 40px solid transparent;}
+    border-bottom: 40px solid transparent;
+    z-index:1;
+    }
   
 }
 
@@ -145,7 +166,8 @@ h2:before {
       border-left: 20px solid $color-1;
       border-top: 40px solid transparent;
       border-bottom: 40px solid transparent;
-      animation: h2before 4s linear 1s infinite alternate;
+      animation: h2before 4s linear 5s infinite alternate;
+      z-index: -1;
     }
 
 
@@ -158,8 +180,24 @@ h2:before {
     text-align: left;    
     letter-spacing: 3px;
     word-spacing: 3px;
-    border-top: 50px solid $color-5;
+    margin-top: 15px;
     background-color: rgba(178, 204, 177, 0.5);
+        a {
+            color: $color-1;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: .5px solid $color-1;
+            padding: 2px;
+        }
+
+}
+
+.summary a:hover {
+    color: $color-5;
+}
+
+.summary a:visited {
+    color: $color-4;
 }
 
 .summary p:nth-child(2){
@@ -174,26 +212,9 @@ h2:before {
     background-color: $color-3;
 }
 
-.summary a {
-    color: $color-1;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: .5px solid $color-1;
-    padding: 2px;
-}
-
-.summary a:hover {
-    color: $color-5;
-}
-
-.summary a:visited {
-    color: $color-4;
-}
-
 .preamble {
     grid-column: 1;
     grid-row: 3 / span 2;
-    border: 3px solid $color-3;
     background-color: $color-2;
     color: $color-5;
     padding: 5px;
@@ -201,7 +222,4 @@ h2:before {
     font-family: $secondary-font;
 }
 
-.main h3 {
-    text-align: center;
-}
 
