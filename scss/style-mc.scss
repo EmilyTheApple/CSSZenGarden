@@ -11,7 +11,7 @@ $secondary-font: 'Open Sans Condensed', sans-serif;
 
 body {
     background-color: $color-5;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23DCE7DB' stroke-width='1px'%3E%3Cpattern id='pattern1' patternUnits='userSpaceOnUse' x='0' y='0' width='120' height='110'%3E%3Cpolygon points='0,20 0,0 50,0' stroke='none'/%3E%3Cpolygon points='70,0 120,0 120,20' stroke='none'/%3E%3Cpolygon points='10,30 60,10 110,30 60,110'/%3E%3Cpolygon points='0,30 0,110 50,110' stroke='none'/%3E%3Cpolygon points='120,30 120,110 70,110' stroke='none'/%3E%3Cpolyline points='70,0 120,20'/%3E%3Cpolyline points='120,30 70,110'/%3E%3Cpolyline points='0,20 50,0'/%3E%3Cpolyline points='0,30 50,110'/%3E%3C/pattern%3E%3Crect fill='url(%23pattern1)' stroke='none' width='100vw' height='100vw'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23DCE7DB' stroke-width='3px'%3E%3Cpattern id='pattern1' patternUnits='userSpaceOnUse' x='0' y='0' width='120' height='110'%3E%3Cpolygon points='0,20 0,0 50,0' stroke='none'/%3E%3Cpolygon points='70,0 120,0 120,20' stroke='none'/%3E%3Cpolygon points='10,30 60,10 110,30 60,110'/%3E%3Cpolygon points='0,30 0,110 50,110' stroke='none'/%3E%3Cpolygon points='120,30 120,110 70,110' stroke='none'/%3E%3Cpolyline points='70,0 120,20'/%3E%3Cpolyline points='120,30 70,110'/%3E%3Cpolyline points='0,20 50,0'/%3E%3Cpolyline points='0,30 50,110'/%3E%3C/pattern%3E%3Crect fill='url(%23pattern1)' stroke='none' width='100vw' height='100vw'/%3E%3C/svg%3E");
     background-repeat: repeat;
     background-attachment: fixed;
 }
@@ -36,21 +36,61 @@ body {
 @import 'partials/footer';
 
 
-/******MC I had to add in this additional break point to make the sidebar transition to grid sooner than the medium screen break.******/
+/***************breakpoint for header fix***********/
+@media (max-width: 1348px) {
+           
+    .intro { 
+        display: grid; 
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+        padding: 10px;
+        width: 65%;
+        max-width: 1080px;
+        margin-left: 400px;
+    } 
+    
+    header {
+        width: 95%;
+        margin: auto;
+    }
+    
+    .summary {
+        grid-row: 2;
+        grid-column: 1;
+        width: 90%;
+        margin: auto;
+        border: none;
+        margin-left: 30px;
+    }
+    
+    .preamble {
+        width: 90%;
+        margin: auto;
+        margin-left: 40px;
+    }
+    
+    .sidebar {
+        height: 2225px;
+    }
+    
+}
+
+
+/*************** medium screen *******************/
+
+
 /*Initial Transition point for Sidebar*/
-@media (max-width: 1555px) {
+@media (max-width: 1100px) {
     .wrapper {
         position: relative;
-        left: 25%;
-        top: 25%;
-        max-width: 100%;
+        width: 100%; 
     }
 
     .sidebar h3 {
         transform: rotate(0deg);
         position: relative;
         top: 0px;
-        left: 0px;
+        left: 40%;
         display: flex;
         justify-content: center;
     }
@@ -61,69 +101,70 @@ body {
         margin: 0 auto;
         align-items: center;
         justify-content: center;
+        height: auto;
     }
 
     .sidebar ul {
         display: grid;
-        grid-template-columns: repeat(4, 155px);
+        grid-template-columns: repeat(6, 1fr);
         grid-template-rows: auto;
         position: relative;
     }
 
     nav li:nth-child(1) /*Mid Century Modern*/ {
-        grid-column-start: 1;
+        grid-column-start: 2;
         grid-row-start: 1;
     }
 
     nav li:nth-child(2) /*Garments*/ {
-        grid-column-start: 2;
+        grid-column-start: 3;
         grid-row-start: 1;
     }
 
     nav li:nth-of-type(3) /*Steel*/ {
-        grid-column-start: 3;
+        grid-column-start: 4;
         grid-row-start: 1;
     }
 
     nav li:nth-child(4) /*Apothecary*/ {
-        grid-column-start: 4;
+        grid-column-start: 5;
         grid-row-start: 1;
     }
 
     nav li:nth-of-type(5) /*screen filler*/ {
-        grid-column-start: 1;
-        grid-row-start: 2;
-    }
-
-    nav li:nth-child(6) /*Fountain Kiss*/ {
         grid-column-start: 2;
         grid-row-start: 2;
     }
 
-    nav li:nth-of-type(7) /*A Robot Named Jimmy*/ {
+    nav li:nth-child(6) /*Fountain Kiss*/ {
         grid-column-start: 3;
         grid-row-start: 2;
     }
 
-    nav li:nth-child(8) /*Verde Modern*/ {
+    nav li:nth-of-type(7) /*A Robot Named Jimmy*/ {
         grid-column-start: 4;
+        grid-row-start: 2;
+    }
+
+    nav li:nth-child(8) /*Verde Modern*/ {
+        grid-column-start: 5;
         grid-row-start: 2;
     }
 
     .design-archives nav li {
         display: grid;
-        grid-template-columns: repeat(4, 155px);
+        grid-template-columns: repeat(6, 1fr);
         grid-template-rows: auto;
         position: relative;
     }
 
     .design-archives nav li:nth-child(1) /*next design*/ {
-        grid-column-start: 2;
+        grid-column-start: 3;
         grid-row-start: 1;
     }
 
     .design-archives nav li:nth-child(2) /*view all designs*/ {
-        grid-column-start: 3;
+        grid-column-start: 4;
         grid-row-start: 1;
         top: 0px;
     }
@@ -139,7 +180,7 @@ body {
     .zen-resources ul {
         position: relative;
         display: grid;
-        grid-template-columns: repeat(5, 155px);
+        grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 1fr 1fr;
         max-width: 100%;
     }
@@ -171,10 +212,20 @@ body {
    
 /*End Initial Transition point for Sidebar*/
 
-/*************** medium screen *******************/
-/*MC Took out the medium screen width of [whatever it was before, I forget now] and added it into the transition at 1555px.*/
-    /*MC changed this from header to .intro to make the entire container stretch full width. Again, we can play with this more if needed*/
-    .intro {
+
+
+    
+    .intro { 
+    display: grid; 
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+    width: 90%;
+    max-width: 1080px;
+    margin: auto;
+} 
+    
+    header {
         width: 100%;
         margin: auto;
     }
@@ -185,6 +236,9 @@ body {
         width: 80%;
         margin: auto;
         border: none;
+    }
+    .preamble {
+        margin: auto;
     }
     
     
@@ -211,14 +265,11 @@ body {
 .participation:after, .requirements:after {
       border-left: 46vw solid transparent;
       border-right: 46vw solid transparent;
-    } 
+    }
     
 }
 
 /* small screen */
-
-/******MC I changed this to 900 instead of 800 so the sidebar would work for grid placement and not cut off. We can play with it more if we need to but this was the only way I could make it fit without making another media query.******/
-
 
 @media (max-width: 900px) {
 
@@ -289,67 +340,68 @@ body {
       border-right: 45vw solid transparent;
     }
     
+
 /*Sidebar small styling*/
 .sidebar ul {
     display: grid;
-    grid-template-columns: repeat(2, 155px);
+    grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
     position: relative;
 }
 
 nav li:nth-child(1) /*Mid Century Modern*/ {
-    grid-column-start: 1;
+    grid-column-start: 4;
     grid-row-start: 1;
 }
 
 nav li:nth-child(2) /*Garments*/ {
-    grid-column-start: 2;
+    grid-column-start: 5;
     grid-row-start: 1;
 }
 
 nav li:nth-of-type(3) /*Steel*/ {
-    grid-column-start: 1;
+    grid-column-start: 4;
     grid-row-start: 2;
 }
 
 nav li:nth-child(4) /*Apothecary*/ {
-    grid-column-start: 2;
+    grid-column-start: 5;
     grid-row-start: 2;
 }
 
 nav li:nth-of-type(5) /*screen filler*/ {
-    grid-column-start: 1;
+    grid-column-start: 4;
     grid-row-start: 3;
 }
 
 nav li:nth-child(6) /*Fountain Kiss*/ {
-    grid-column-start: 2;
+    grid-column-start: 5;
     grid-row-start: 3;
 }
 
 nav li:nth-of-type(7) /*A Robot Named Jimmy*/ {
-    grid-column-start: 1;
+    grid-column-start: 4;
     grid-row-start: 4;
 }
 
 nav li:nth-child(8) /*Verde Modern*/ {
-    grid-column-start: 2;
+    grid-column-start: 5;
     grid-row-start: 4;
 }
 
 .design-archives nav li {
     display: grid;
-    grid-template-columns: repeat(2, 155px);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
     position: relative;
 }
 
 .design-archives nav li:nth-child(1) /*next design*/ {
-    grid-column-start: 1;
+    grid-column-start: 4;
     grid-row-start: 1;
 }
 .design-archives nav li:nth-child(2) /*view all designs*/ {
-    grid-column-start: 2;
+    grid-column-start: 5;
     grid-row-start: 1;
     top: 0px;
 }
@@ -365,36 +417,37 @@ nav li:nth-child(8) /*Verde Modern*/ {
 .zen-resources ul {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 155px);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 1fr;
     max-width: 100%;
 }
 
 .zen-resources li:nth-child(1) /*View This Design's CSS*/ {
-    grid-column-start: 1;
+    grid-column-start: 3;
     grid-row-start: 1;
 }
 
 .zen-resources li:nth-child(2) /*CSS Resources*/ {
-    grid-column-start: 2;
+    grid-column-start: 4;
     grid-row-start: 1;
 }
 
 .zen-resources li:nth-child(3) /*FAQ*/ {
-    grid-column-start: 1;
+    grid-column-start: 3;
     grid-row-start: 2;
 }
 
 .zen-resources li:nth-child(4) /*Submit a Design*/ {
-    grid-column-start: 2;
+    grid-column-start: 4;
     grid-row-start: 2;
 }
 
 .zen-resources li:nth-child(5) /*Translations*/ {
-    grid-column-start: 1;
+    grid-column-start: 3;
     grid-row-start: 3;
 }
 /*End Sidebar small styling*/
+
 
 }
 
