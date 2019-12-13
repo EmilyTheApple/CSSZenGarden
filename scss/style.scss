@@ -70,7 +70,11 @@ body {
     }
     
     .sidebar {
-        height: 2500px;
+        height: 2225px;
+    }
+    
+    .explanation, .participation, .benefits, .requirements {
+        margin-left: 360px;
     }
     
 }
@@ -86,14 +90,6 @@ body {
         width: 100%; 
     }
 
-    .sidebar h3 {
-        transform: rotate(0deg);
-        position: relative;
-        top: 0px;
-        left: 0px;
-        display: flex;
-        justify-content: center;
-    }
 
     .sidebar {
         position: relative;
@@ -101,69 +97,78 @@ body {
         margin: 0 auto;
         align-items: center;
         justify-content: center;
+        height: auto;
+            h3 {
+                transform: rotate(0deg);
+                position: relative;
+                top: 0px;
+                left: 40%;
+                display: flex;
+                justify-content: center;
+            }
+            ul {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: auto;
+                position: relative;
+            }
     }
 
-    .sidebar ul {
-        display: grid;
-        grid-template-columns: repeat(4, 155px);
-        grid-template-rows: auto;
-        position: relative;
-    }
 
     nav li:nth-child(1) /*Mid Century Modern*/ {
-        grid-column-start: 1;
+        grid-column-start: 2;
         grid-row-start: 1;
     }
 
     nav li:nth-child(2) /*Garments*/ {
-        grid-column-start: 2;
+        grid-column-start: 3;
         grid-row-start: 1;
     }
 
     nav li:nth-of-type(3) /*Steel*/ {
-        grid-column-start: 3;
+        grid-column-start: 4;
         grid-row-start: 1;
     }
 
     nav li:nth-child(4) /*Apothecary*/ {
-        grid-column-start: 4;
+        grid-column-start: 5;
         grid-row-start: 1;
     }
 
     nav li:nth-of-type(5) /*screen filler*/ {
-        grid-column-start: 1;
-        grid-row-start: 2;
-    }
-
-    nav li:nth-child(6) /*Fountain Kiss*/ {
         grid-column-start: 2;
         grid-row-start: 2;
     }
 
-    nav li:nth-of-type(7) /*A Robot Named Jimmy*/ {
+    nav li:nth-child(6) /*Fountain Kiss*/ {
         grid-column-start: 3;
         grid-row-start: 2;
     }
 
-    nav li:nth-child(8) /*Verde Modern*/ {
+    nav li:nth-of-type(7) /*A Robot Named Jimmy*/ {
         grid-column-start: 4;
+        grid-row-start: 2;
+    }
+
+    nav li:nth-child(8) /*Verde Modern*/ {
+        grid-column-start: 5;
         grid-row-start: 2;
     }
 
     .design-archives nav li {
         display: grid;
-        grid-template-columns: repeat(4, 155px);
+        grid-template-columns: repeat(6, 1fr);
         grid-template-rows: auto;
         position: relative;
     }
 
     .design-archives nav li:nth-child(1) /*next design*/ {
-        grid-column-start: 2;
+        grid-column-start: 3;
         grid-row-start: 1;
     }
 
     .design-archives nav li:nth-child(2) /*view all designs*/ {
-        grid-column-start: 3;
+        grid-column-start: 4;
         grid-row-start: 1;
         top: 0px;
     }
@@ -179,7 +184,7 @@ body {
     .zen-resources ul {
         position: relative;
         display: grid;
-        grid-template-columns: repeat(5, 155px);
+        grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 1fr 1fr;
         max-width: 100%;
     }
@@ -210,8 +215,6 @@ body {
     }
    
 /*End Initial Transition point for Sidebar*/
-
-
 
     
     .intro { 
@@ -247,23 +250,41 @@ body {
     }
     
     .explanation:before, .benefits:before {
-      border-left: 46vw solid transparent;
-      border-right: 46vw solid transparent;
+      border-left: 44vw solid transparent;
+      border-right: 44vw solid transparent;
     }
 
-.explanation:after, .benefits:after {
-      border-left: 46vw solid transparent;
-      border-right: 46vw solid transparent;
+    .explanation:after, .benefits:after {
+      border-left: 44vw solid transparent;
+      border-right: 44vw solid transparent;
     }
   
-.participation:before, .requirements:before {
-      border-left: 46vw solid transparent;
-      border-right: 46vw solid transparent;
+    .participation:before, .requirements:before {
+      border-left: 44vw solid transparent;
+      border-right: 44vw solid transparent;
     }
 
-.participation:after, .requirements:after {
-      border-left: 46vw solid transparent;
-      border-right: 46vw solid transparent;
+    .participation:after, .requirements:after {
+      border-left: 44vw solid transparent;
+      border-right: 44vw solid transparent;
+    }
+    
+    .explanation:hover, .participation:hover, .benefits:hover, .requirements:hover {
+    background-color: $color-3;
+    transform: scale(1.02);
+}
+    .explanation:hover::before, .benefits:hover::before {
+    border-bottom: 15px solid $color-3;
+}
+    .explanation:hover::after, .benefits:hover::after {
+    border-top: 15px solid $color-3;
+}
+    
+    footer {
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     
 }
@@ -324,83 +345,91 @@ body {
       border-right: 45vw solid transparent;
     }
 
-.explanation:after, .benefits:after {
+    .explanation:after, .benefits:after {
       border-left: 45vw solid transparent;
       border-right: 45vw solid transparent;
     }
   
-.participation:before, .requirements:before {
+    .participation:before, .requirements:before {
       border-left: 45vw solid transparent;
       border-right: 45vw solid transparent;
     }
 
-.participation:after, .requirements:after {
+    .participation:after, .requirements:after {
       border-left: 45vw solid transparent;
       border-right: 45vw solid transparent;
     }
+    
+    footer {
+        width: 100%;
+        margin: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
     
 
 /*Sidebar small styling*/
 .sidebar ul {
     display: grid;
-    grid-template-columns: repeat(2, 155px);
+    grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
     position: relative;
 }
 
 nav li:nth-child(1) /*Mid Century Modern*/ {
-    grid-column-start: 1;
+    grid-column-start: 4;
     grid-row-start: 1;
 }
 
 nav li:nth-child(2) /*Garments*/ {
-    grid-column-start: 2;
+    grid-column-start: 5;
     grid-row-start: 1;
 }
 
 nav li:nth-of-type(3) /*Steel*/ {
-    grid-column-start: 1;
+    grid-column-start: 4;
     grid-row-start: 2;
 }
 
 nav li:nth-child(4) /*Apothecary*/ {
-    grid-column-start: 2;
+    grid-column-start: 5;
     grid-row-start: 2;
 }
 
 nav li:nth-of-type(5) /*screen filler*/ {
-    grid-column-start: 1;
+    grid-column-start: 4;
     grid-row-start: 3;
 }
 
 nav li:nth-child(6) /*Fountain Kiss*/ {
-    grid-column-start: 2;
+    grid-column-start: 5;
     grid-row-start: 3;
 }
 
 nav li:nth-of-type(7) /*A Robot Named Jimmy*/ {
-    grid-column-start: 1;
+    grid-column-start: 4;
     grid-row-start: 4;
 }
 
 nav li:nth-child(8) /*Verde Modern*/ {
-    grid-column-start: 2;
+    grid-column-start: 5;
     grid-row-start: 4;
 }
 
 .design-archives nav li {
     display: grid;
-    grid-template-columns: repeat(2, 155px);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
     position: relative;
 }
 
 .design-archives nav li:nth-child(1) /*next design*/ {
-    grid-column-start: 1;
+    grid-column-start: 4;
     grid-row-start: 1;
 }
 .design-archives nav li:nth-child(2) /*view all designs*/ {
-    grid-column-start: 2;
+    grid-column-start: 5;
     grid-row-start: 1;
     top: 0px;
 }
@@ -416,43 +445,36 @@ nav li:nth-child(8) /*Verde Modern*/ {
 .zen-resources ul {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 155px);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 1fr;
     max-width: 100%;
 }
 
 .zen-resources li:nth-child(1) /*View This Design's CSS*/ {
-    grid-column-start: 1;
+    grid-column-start: 3;
     grid-row-start: 1;
 }
 
 .zen-resources li:nth-child(2) /*CSS Resources*/ {
-    grid-column-start: 2;
+    grid-column-start: 4;
     grid-row-start: 1;
 }
 
 .zen-resources li:nth-child(3) /*FAQ*/ {
-    grid-column-start: 1;
+    grid-column-start: 3;
     grid-row-start: 2;
 }
 
 .zen-resources li:nth-child(4) /*Submit a Design*/ {
-    grid-column-start: 2;
+    grid-column-start: 4;
     grid-row-start: 2;
 }
 
 .zen-resources li:nth-child(5) /*Translations*/ {
-    grid-column-start: 1;
+    grid-column-start: 3;
     grid-row-start: 3;
 }
 /*End Sidebar small styling*/
 
 
 }
-
-
-
-
-
-
-
