@@ -2,31 +2,26 @@ footer {
     position: relative;
     margin-top: 100px;
     height: 225px;
-    width: 75%;
-    margin-left: 25%;
+    width: 80%;
+    margin-left: 15%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     background-color: $color-2;
-}
-
-footer a {
-    font-size: 20px;
-    z-index: 1;
-    color: $color-2;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-footer a:hover {
-    transform: scale(1.1);
-}
-
-
-footer a:hover{
+    a {
+        font-size: 20px;
+        z-index: 1;
+        color: $color-2;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    a:hover {
+        transform: scale(1.1);
+    }
+    a:hover{
     color: $color-5;
+    }
 }
-
 
 footer a:nth-child(odd) {
     width: 0;

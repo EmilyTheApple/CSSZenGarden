@@ -15,12 +15,13 @@
 .explanation, .participation, .benefits, .requirements {
     background-color: $color-1;
     width: 65%;
-    margin-left: 400px;
+    margin-left: 380px;
     height: auto;
     background: $color-1;
     position: relative;
     padding-left: 10px;
     padding-right: 10px;
+    max-width: 90%;
 }
 
 
@@ -96,5 +97,9 @@ abbr[title] {
 
 a {
     color: black;
+}
+
+a:hover {
+    color: $color-5;
 }
 

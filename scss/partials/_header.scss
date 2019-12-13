@@ -189,16 +189,14 @@ h2:before {
             border: .5px solid $color-1;
             padding: 2px;
         }
-
+        a:hover {
+            color: $color-5;
+        }
+        a:visited {
+            color: $color-4;
+        }
 }
 
-.summary a:hover {
-    color: $color-5;
-}
-
-.summary a:visited {
-    color: $color-4;
-}
 
 .summary p:nth-child(2){
     text-align: center;
